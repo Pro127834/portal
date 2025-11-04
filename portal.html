@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystic Gate Grid</title>
+  <link rel="stylesheet" href="style(1).css">
+</head>
+<style>
+  
+  .portal-grid {
+  text-align: center;
+  margin-top: 20px;
+  padding: 60px 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.portal-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.portal-button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: cyan;
+  background: radial-gradient(circle at center, rgba(0,255,255,0.15), rgba(255,0,255,0.05));
+  border: 2px solid cyan;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px cyan, inset 0 0 10px magenta;
+  transition: 0.3s ease;
+}
+
+.portal-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px cyan, inset 0 0 20px magenta;
+  background: cyan;
+  color: #000;
+}
+
+.center {
+  transform: scale(1.3);
+  box-shadow: 0 0 60px magenta, inset 0 0 40px cyan;
+}
+
+</style>
+<body>
+  <div id="stars"></div>
+
+  <section class="portal-grid">
+    <h1 class="title">MYSTIC GATE</h1>
+    <p class="tagline">Choose your realm</p>
+
+    <div class="portal-container">
+      <a href="The Fourth Dimension.html" class="portal-button">The Fourth Dimension</a>
+      <a href="Parallel Universes.html" class="portal-button">Parallel Universes</a>
+      <a href="Quantum Dimensions.html" class="portal-button">Quantum Dimensions</a>
+      <a href="Alternate Realities.html" class="portal-button">Alternate Realities</a>
+      <a href="Time Travel.html" class="portal-button">Time Travel</a>
+      <a href="The Wormhole.html" class="portal-button">The Wormhole</a>
+      <!-- <a href="#" class="portal-button">Mystic Gate</a>
+      <a href="#" class="portal-button">Mystic Gate</a>
+      <a href="#" class="portal-button">Mystic Gate</a> -->
+    </div>
+  </section>
+</body>
+</html>

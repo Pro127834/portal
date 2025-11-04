@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimension Gateway</title>
+  <link rel="stylesheet" href="style(1).css" />
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="portal-glow"></div>
+
+  <section class="hero">
+    <h1 class="title">D I M E N S I O N</h1>
+    <p class="tagline">Explore Worlds Within Worlds</p>
+    <a href="portal.html" class="enter-btn">Enter the Portal</a>
+  </section>
+
+  <div id="warp"></div>
+
+  <script>
+    const enterBtn = document.querySelector(".enter-btn");
+    const warp = document.getElementById("warp");
+
+    enterBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      warp.classList.add("active");
+      setTimeout(() => {
+        window.location.href = "portal.html";
+      }, 1800);
+    });
+  </script>
+</body>
+</html>

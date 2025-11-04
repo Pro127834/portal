@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(ellipse at bottom, #0d1b2a, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+                        radial-gradient(1px 1px at 80px 140px, #fff, transparent),
+                        radial-gradient(1px 1px at 200px 300px, #fff, transparent);
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: cyan;
+      text-shadow: 0 0 20px magenta;
+      letter-spacing: 4px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, cyan, magenta);
+      margin: 20px auto;
+      border-radius: 3px;
+    }
+
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #cfd8dc;
+      margin-top: 30px;
+      text-align: justify;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+
+    img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 20px;
+      margin: 40px 0;
+      box-shadow: 0 0 40px rgba(0,255,255,0.4);
+      transition: 0.3s;
+    }
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 60px rgba(255,0,255,0.4);
+    }
+
+    .go-back {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid cyan;
+      color: cyan;
+      padding: 10px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+    .go-back:hover {
+      background: cyan;
+      color: #000;
+      transform: translateY(-5px);
+    }
+
+    /* Portal glow decoration */
+    .portal-glow {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,255,0.3), transparent 70%);
+      filter: blur(100px);
+      z-index: 1;
+      animation: pulse 4s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { opacity: 0.4; transform: translateX(-50%) scale(1); }
+      to { opacity: 0.8; transform: translateX(-50%) scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+
+  <div class="portal-glow"></div>
+
+  <div class="page">
+    <h1>Time Travel</h1>
+    <div class="divider"></div>
+
+    <img src="https://source.unsplash.com/800x600/?time,space,dimension,ai" alt="AI concept of Fourth Dimension">
+
+    <div class="content">
+       Time travel has fascinated humankind for centuries. Is it possible to visit the past or
+ glimpse the future? While science has yet to achieve this, Einstein’s theories show
+ that time slows down at high speeds or near strong gravitational fields—making
+ time travel theoretically possible. From H.G. Wells’ The Time Machine to Marvel’s
+ Endgame, stories about time travel reflect our deep curiosity about fate, memory,
+ and change. It represents both a scientific challenge and a philosophical
+ journey—reminding us that every second shapes eternity.
+    </div>
+  </div>
+
+  <button class="go-back" onclick="history.back()">← Go Back</button>
+</body>
+</html>
